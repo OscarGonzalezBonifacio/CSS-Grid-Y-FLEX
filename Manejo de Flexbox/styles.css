@@ -8,11 +8,27 @@ body {
 .header-sitio {
     background-color: #03A9F4;
     padding:0 20px;
-    /* Flex aqui*/
+  
+     /* Flex aqui primera modificacion*/
+
+        /*Manda el Nombre del sitio al lado izquierdo- antes se encontraba en el centro */
+        display:flex;
+        /* para que se acomode una debajo del otro por default suele estar row */
+        flex-direction: column;
+        
+    
+
+
+
 }
 @media screen and (min-width:768px) {
     .header-sitio {
-        /* Flex aqui*/
+       
+  /* Flex para que regrese asu lugar alado izquierdo*/
+  flex-direction: row;
+  /* aqui manda el menu al lado izquierdo, funciona mejor en row es lo mas optimo */
+  justify-content: space-between;
+
     }
 }
 .header-sitio h1 {
@@ -20,7 +36,8 @@ body {
 }
 
 nav {
-    /* Flex aqui*/
+    /* Flex aqui es para que se centre el menu de inicio*/
+    align-self: center;
 }
 nav a {
     color: white; 
