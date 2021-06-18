@@ -106,14 +106,23 @@ aside {
     }
 }
 .servicios {
-    /* Flex aqui*/
+    /* para imitar el comprtamiento normal uno alado del otro la forma aparecen los servicios normal
+    un enferente del otro sin importar la disminucion de pantalla */
+    /*display: flex; */
 }
 .servicios .servicio {
-    /* Flex aqui*/
+    /* de esta forma todo los servicios generan del mismo tamaño  flex: 1;  */
+    
 }
 @media screen and (min-width:768px) {
+    .servicios {
+        /* para imitar el comprtamiento normal uno alado del otro */
+        display: flex;
+    }
+
     .servicios .servicio {
-        /* Flex aqui*/
+         /* de esta forma todo los servicios generan del mismo tamaño*/
+    flex: 1;
     }
 }
 
@@ -135,7 +144,14 @@ footer {
     height: 100px;
     background-color: #8E24AA;
     margin-top: 20px;
-    /* Flex aqui*/
+    /* Cambiando a flex*/
+    display: flex;
+    /*centrando el parrafo */
+    justify-content: center;
+    /* centrado vertical y horizontalmente*/
+    align-items: center;
+
+
 }
 footer p {
     color: white;
