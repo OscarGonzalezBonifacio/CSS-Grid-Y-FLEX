@@ -62,20 +62,29 @@ h2 {
 
 .contenedor-flex {
     margin-top: 20px;
-    /* Flex aqui*/
+    /* manda el contenido del conteder-flex a lado izquierdo*/
+    display: flex;
+
+    /* para acomodarse uno debajo del otro cuando sea responsive*/
+    flex-direction: column;
+
+
 }
 @media screen and (min-width:768px) { 
     .contenedor-flex {
-       /* Flex aqui*/
+       /* Para que en dispositivos mas grandes quede uno frente del otro*/
+      flex-direction: row;
     }
 }
 
 .principal {
-    /* Flex aqui*/
+    /* Forder 2 para dar prioridad de ordenar a nuestro segundo elemento*/
+    order: 2;
 
 }
 aside {
-    /* flex aqui*/
+    /*para dalr separacion debajo del aside*/
+    margin-bottom: 5%;
 }
 
 aside {
@@ -83,10 +92,17 @@ aside {
 }
 @media screen and (min-width:768px) {
     .principal {
-        /* Flex aqui*/
+        /*cero para que no cresca, 1 si tenga swing  y una base del 60% */
+        flex: 0 1 60%;
+        /* margin para darle separacion entre el aside*/
+        margin-right: 4%;
+        /*para regresar el orden al estado original sin la modificacion del order 2 solo disponible en media screen*/
+        order: unset;
     }
     aside {
-        /* Flex aqui*/
+        /* uno para creca y lo demas parametros para que tome el resto de espacio restante*/
+        flex: 1;
+
     }
 }
 .servicios {
