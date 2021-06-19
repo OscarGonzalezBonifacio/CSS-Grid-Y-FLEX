@@ -1,0 +1,29 @@
+body{
+    /* border-box nos permite que cuando agregemos padding no afecte el ancho de nuestros elementos*/
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+.contenedor{
+    max-width: 1100px;
+/*  para centrarlo */
+    margin: 0 auto;
+}
+h2{
+    /* para que la etiqueta entrada no cresca*/
+    flex: 0 1 100%;
+}
+
+img{
+    /* para generar que las imagenes sean responsive, anteriormente se generaba el scroll
+    para mover la imagen manual, con este diseno al disminuis la pantalla la imagen queda fija*/
+    max-width: 100%;
+}
+
+.contenido-principal{
+
+    /* se le agrega el flexbot se colocan uno enfrente del otro*/
+    display: flex;
+    /* flex warp para que se acomode una abajo de la otra el contenido*/
+    flex-wrap: wrap;
+
+}
