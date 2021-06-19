@@ -18,12 +18,55 @@ img{
     para mover la imagen manual, con este diseno al disminuis la pantalla la imagen queda fija*/
     max-width: 100%;
 }
+/* se agrega el medio query  para dalr la medida responsive*/
 
-.contenido-principal{
+@media screen and (min-width:480px){
+  
+    .contenido-principal{
 
-    /* se le agrega el flexbot se colocan uno enfrente del otro*/
-    display: flex;
-    /* flex warp para que se acomode una abajo de la otra el contenido*/
-    flex-wrap: wrap;
+        /* se le agrega el flexbot se colocan uno enfrente del otro*/
+        display: flex;
+        /* flex warp para que se acomode una abajo de la otra el contenido*/
+        flex-wrap: wrap;
+
+        /* para darle espacio entre imagenes*/
+        justify-content: space-between;
+    
+    }
+    /* para generar 2 entradas  el primero es flex grow, el segundo flex shrink y el tereceroflex basis*/
+    .entrada{
+
+        /* -1 rem para darle la medida al espacio */
+        flex: 0 1 calc(50% - 1rem);
+
+    }
+
+    /*------------------------------------ segunda medida  768px---------------------------------------------------------------*/
+    @media screen and (min-width:768px){
+  
+        .contenido-principal{
+    
+            /* se le agrega el flexbot se colocan uno enfrente del otro*/
+            display: flex;
+            /* flex warp para que se acomode una abajo de la otra el contenido*/
+            flex-wrap: wrap;
+    
+            /* para darle espacio entre imagenes*/
+            justify-content: space-between;
+        
+        }
+        /* para generar 2 entradas  el primero es flex grow, el segundo flex shrink y el tereceroflex basis*/
+        .entrada{
+    
+            /* -1 rem para darle la medida al espacio */
+            flex: 0 1 calc(33% - 1rem);
+    
+        }
+
+
+
+
+
 
 }
+
