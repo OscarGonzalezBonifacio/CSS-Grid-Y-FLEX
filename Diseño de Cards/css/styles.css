@@ -1,7 +1,7 @@
 body{
     /* border-box nos permite que cuando agregemos padding no afecte el ancho de nuestros elementos*/
     box-sizing: border-box;
-    background-color: aliceblue;
+    background-color: rgb(213, 218, 223);
 }
 .contenedor{
     max-width: 1100px;
@@ -11,6 +11,20 @@ body{
 h2{
     /* para que la etiqueta entrada no cresca*/
     flex: 0 1 100%;
+    /* para centrar el texto*/
+    text-align: center;
+    /* cambio del tamano de la fuente*/
+    font-size: 1.8rem;
+
+}
+/* fuentes cargados del esterior*/
+h3{
+/* cargamos las fuentes*/
+    font-family: 'libre baskerville', serif;
+margin: 0;
+font-weight: 700;
+
+
 }
 
 img{
@@ -61,6 +75,54 @@ img{
             /* -1 rem para darle la medida al espacio */
             flex: 0 1 calc(33% - 1rem);
     
+        }
+
+        .entrada{
+
+            margin-bottom: 1rem;
+        }
+             /*Contenido para la caja*/
+        .contenido{
+
+            background-color: aliceblue;
+            /* para el margen inferior*/
+
+            /*centrado*/
+            text-align: center;
+
+            margin-bottom: 1rem;
+
+              /* para generar todas en mayusculas abarca todo el contenido*/
+              text-transform: uppercase;
+
+        }
+        .contenido span{
+
+            color: rgb(205, 43, 226);
+        }
+
+        .contenido h3{
+            
+            /* para hacer mas pequena la letra*/
+            font-size: .9rem;
+            /* para el interlineado interlineado*/
+            line-height: 1.4rem;
+          
+        }
+        .boton{
+            /* color azul del background*/
+            background-color: rgb(26, 82, 185);
+            /*color blanco dentro de las letras*/
+            color: aliceblue;
+            /* el tamano del paading, modificacion del tamano de los botones*/
+            padding: .8rem 3rem;
+            /* */
+            margin-top: 1rem;
+           /*el problema de display por eos se bloquea*/
+            display: inline-block;
+           /*quita la linea */
+            text-decoration: none;
+
         }
 
 
