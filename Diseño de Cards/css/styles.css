@@ -32,6 +32,73 @@ img{
     para mover la imagen manual, con este diseno al disminuis la pantalla la imagen queda fija*/
     max-width: 100%;
 }
+
+
+ /*Contenido para la caja*/
+ .contenido{
+
+    background-color: aliceblue;
+    /* para el margen inferior*/
+
+    /*centrado*/
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+      /* para generar todas en mayusculas abarca todo el contenido*/
+      text-transform: uppercase;
+
+}
+.contenido span{
+
+    color: rgb(205, 43, 226);
+}
+
+.contenido h3{
+    
+    /* para hacer mas pequena la letra*/
+    font-size: .9rem;
+    /* para el interlineado interlineado*/
+    line-height: 1.4rem;
+  
+}
+.boton{
+    /* color azul del background*/
+    background-color: rgb(26, 82, 185);
+    /*color blanco dentro de las letras*/
+    color: aliceblue;
+    /* el tamano del paading, modificacion del tamano de los botones*/
+    padding: .8rem 3rem;
+    /* */
+    margin-top: 1rem;
+   /*el problema de display por eos se bloquea*/
+    display: inline-block;
+   /*quita la linea */
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* se agrega el medio query  para dalr la medida responsive*/
 
 @media screen and (min-width:480px){
@@ -81,49 +148,7 @@ img{
 
             margin-bottom: 1rem;
         }
-             /*Contenido para la caja*/
-        .contenido{
-
-            background-color: aliceblue;
-            /* para el margen inferior*/
-
-            /*centrado*/
-            text-align: center;
-
-            margin-bottom: 1rem;
-
-              /* para generar todas en mayusculas abarca todo el contenido*/
-              text-transform: uppercase;
-
-        }
-        .contenido span{
-
-            color: rgb(205, 43, 226);
-        }
-
-        .contenido h3{
             
-            /* para hacer mas pequena la letra*/
-            font-size: .9rem;
-            /* para el interlineado interlineado*/
-            line-height: 1.4rem;
-          
-        }
-        .boton{
-            /* color azul del background*/
-            background-color: rgb(26, 82, 185);
-            /*color blanco dentro de las letras*/
-            color: aliceblue;
-            /* el tamano del paading, modificacion del tamano de los botones*/
-            padding: .8rem 3rem;
-            /* */
-            margin-top: 1rem;
-           /*el problema de display por eos se bloquea*/
-            display: inline-block;
-           /*quita la linea */
-            text-decoration: none;
-
-        }
 
 
 
@@ -131,4 +156,3 @@ img{
 
 
 }
-
