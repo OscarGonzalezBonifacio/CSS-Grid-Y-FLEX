@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     box-sizing: border-box;
     margin:0;
@@ -34,6 +38,7 @@ nav ul a {
     text-decoration: none;
     font-size: 1.4rem;
 }
+/* Menu Sencillo*/
 .sencillo ul{
     /* genera el formato flex*/
     display: flex;
@@ -58,9 +63,52 @@ nav ul a {
         flex-direction: row;
     }
     
-    .sencillo ul li[
-        /* separacion entre llos para que no este*/
-        margin-bottom: 0;
+    .sencillo ul li{
+ /* separacion entre llos para que no este*/
+ margin-bottom: 0px;
 
-    ]
+    }   
+
 }
+/* estilo de iconos*/
+.iconos ul li a {
+    display: flex;
+    justify-content:center;
+    flex:1;
+}
+.iconos .icono {
+    font-size: 2rem;
+    /*se le da separacion para la base*/
+    flex: 0 0 3rem;
+}
+
+.iconos .texto {
+    font-size: 1.4rem;
+}
+.iconos .texto span {
+    font-size: .8rem;
+    display: block;
+    margin-top: 10px;
+}
+
+@media screen and (min-width:480px) {
+    .iconos ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .iconos ul li {
+        display: flex;
+        flex: 0 1 calc( 50% - 2rem);
+    }
+
+    
+}
+@media screen and (min-width:768px) {
+    .iconos ul li {
+        display: flex;
+        flex: 1;
+    }
+
+    
+}
+
