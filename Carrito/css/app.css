@@ -1,3 +1,5 @@
+/* Variables*/
+/*Colores*/
 .contenedor {
   max-width: 1100px;
   /*centramos el contenido*/
@@ -24,4 +26,34 @@
 
 .header .logo {
   padding: 1.4rem 0;
+}
+
+.carrito-compras {
+  /*la forma de unir selectores & sass anidandonos */
+  position: relative;
+}
+
+.carrito-compras:hover .contenido {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: #858a8a;
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.carrito-compras:hover .contenido img {
+  max-width: 200px;
+}
+
+.carrito-compras:hover .contenido .boton {
+  background-color: #2a95ec;
+  /*tamano del boton*/
+  padding: .5rem 1rem;
+  margin-top: 1rem;
+  /*los enlazes tiene display inline por default*/
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
 }
