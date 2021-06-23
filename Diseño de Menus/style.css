@@ -112,3 +112,48 @@ nav ul a {
     
 }
 
+/* Menu de Dropdown*/
+.dropdown ul{
+ display: flex;
+ /*para las columnas*/
+ flex-direction: column;
+}
+
+@media screen and (min-width:768px){
+    .dropdown ul {
+ /* es para que su hubiquen las columnas de manera vertical*/
+        flex-direction: row;
+    }
+    .dropdown ul li{
+        display: flex;
+        justify-content: center;
+        /*para colocar el submenu*/
+        flex-direction: column;
+    }
+    /*para poder crear el submenu*/
+    @media screen and (min-width:768px){
+        .dropdown ul li{
+            position: relative;
+            display: flex;
+            flex: 1 1 100%;
+        }
+        .dropdown ul li ul{
+             /*para mostrar su hijos*/
+             display:none;
+            /*esto garantiza siempre se localize abajo*/
+            position: absolute;
+            top:100%;
+            /*para fijarlo del lado izquierdo*/
+            left: 0;
+            background-color: #ff9966;
+        }
+/*para darle es delizar*/
+        .dropdown ul li:hover ul {
+            display: flex;
+            flex-direction: column ;
+            /*para generar 100 porciento de lado del padre*/
+            width: 100%;
+        }
+
+    }
+}
