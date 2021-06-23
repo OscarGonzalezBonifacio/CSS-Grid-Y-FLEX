@@ -192,3 +192,14 @@ justify-content: flex-end;
 .sociales ul li a[href*='pinterest.com']::before {
     content: "\f0d2";
 }
+/*Estilos combinados*/
+ .navegacion-sociales-dropdown {
+     /*un enferente del otro por default*/
+     display: flex;
+     /*deja un espacio a medias, uno ala izquierda otro 
+     ala derecha*/
+     justify-content: space-between;
+     /*ponemos el mismo color de fondo para que no se mire 
+     blanco lo cambiamo azul*/
+     background-color: #3F51B5;
+ }
