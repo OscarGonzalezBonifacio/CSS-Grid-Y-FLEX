@@ -153,7 +153,42 @@ nav ul a {
             flex-direction: column ;
             /*para generar 100 porciento de lado del padre*/
             width: 100%;
+            
         }
 
     }
+}
+/* redes sociales*/
+/* quitar el texto*/
+.sociales ul li span{
+    display: none;
+}
+.sociales ul {
+    /*para alinear por defaul
+     y el content para mostralos al final*/
+display: flex;
+justify-content: flex-end;
+
+}
+.sociales ul li  a:before{
+    /*la forma de habilitar fontawesome*/
+    font-family: "Font Awesome 5 Brands";
+}
+/*para crear el icono de facebook*/
+.sociales ul li a[href*='facebook.com']::before {
+    content: "\f39e";
+}
+/*el mismo codigo para la siguiente redes sociales*/
+.sociales ul li a[href*='twitter.com']::before {
+    content: "\f099";
+}
+/* si el dirrecionamiento esta mal no crea el icono*/
+.sociales ul li a[href*='youtube.com']::before {
+    content: "\f167";
+}
+.sociales ul li a[href*='instagram.com']::before {
+    content: "\f16d";
+}
+.sociales ul li a[href*='pinterest.com']::before {
+    content: "\f0d2";
 }
