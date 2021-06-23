@@ -113,9 +113,12 @@
                 </li>
             </ul>
         </nav>
-
+<!--cambiamos al nav creamos un div a class navegacion-sociales-->
         <h2>Dropdown Menu con Redes Sociales</h2>
-        <nav id="iconos">
+        <div class="navegacion-sociales-dropdown ">
+            <!--se creara un nuevo nav para reutilizar la 
+                clase dropdown-->
+                <nav class="dropdown ">  
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Nosotros</a>
@@ -134,6 +137,10 @@
                 </li>
                 <li><a href="#">Asistencia</a></li>
             </ul>
+            <!--cierre del nav con la clase dropdown--->
+            </nav>
+            <!-- reutilizacion y creacion del nav de las clases de sociales-->
+            <nav class="sociales">
             <ul>
                 <li>
                     <a href="http://facebook.com"><span> Facebook</span></a>
@@ -151,7 +158,10 @@
                     <a href="http://pinterest.com"><span> Pinterest</span></a>
                 </li>
             </ul>
+            <!--cierre del nav de sociales-->
         </nav>
+        <!--div del cierre de navegacion-social-->
+    </div>
     </div>
     
 </body>
