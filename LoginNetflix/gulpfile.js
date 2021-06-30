@@ -22,7 +22,7 @@ function css(){
 // funcion para ejecutar  cambios de archivos
 function watchFiles(){
     gulp.watch('scss/*.scss', css);
-    //funciones para correr en paralelo
+    //funciones para correr en paralelo y estar atento html
     gulp.watch('index.html');
 
 }
@@ -31,3 +31,4 @@ function watchFiles(){
 gulp.task('css', css);
 //modificacion para correr las funciones en paralelo
 gulp.task('watch', gulp.parallel(watchFiles));
+

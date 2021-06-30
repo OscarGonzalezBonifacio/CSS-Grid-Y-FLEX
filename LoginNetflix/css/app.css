@@ -1,3 +1,16 @@
+/* Medias query */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after
+*:before {
+  box-sizing: inherit;
+}
+
 body {
   background-color: red;
+  /*mixins para agregarle el tamano dependiendo el color*/
+  background-color: orange;
 }
