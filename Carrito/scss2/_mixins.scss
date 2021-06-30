@@ -1,0 +1,73 @@
+@use "sass:color";
+/*Botones*/
+@mixin boton($color) {
+
+    background-color: $color;
+    /*tamano del boton*/
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    /*los enlazes tiene display inline por default*/
+    display: block;
+    text-align: center;
+    color: $blanco;
+    text-decoration: none;
+}
+@mixin box-sizing($box-model) {
+    /*tamano de la caja*/
+    box-sizing: $box-model;
+    
+}
+
+@mixin background-imagen($imagen){
+    background-image: url($imagen);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/*mixin pra la barra de deagradado con 2 parrametros*/
+@mixin gradiente($color1, $color2){
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+
+}
+
+/*Medias querry*/
+@mixin telefono{
+    @media only screen and (min-width: #{$telefono}){
+
+        @content;
+
+
+    }
+}
+@mixin tablet{
+    @media only screen and (min-width: #{$tablet}){
+
+        @content;
+
+    }
+}
+
+@mixin pc{
+    @media only screen and (min-width: #{$pc}){
+        @content;
+
+    }
+}
+/*Menus de Navegacion*/
+@mixin menus(){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    flex: 1;
+    @include pc() {
+        flex: 0 1 calc(30% - 1rem);
+    }
+
+    a {
+        color:$negro;
+        text-decoration: none;
+        margin-bottom: .5rem;
+
+    }
+}
+
+

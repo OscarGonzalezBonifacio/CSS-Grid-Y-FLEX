@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+
+var sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 
 function css() {
@@ -16,4 +17,4 @@ function watchFiles() {
 
 // tasks
 gulp.task('css', css);
-gulp.task("watch", gulp.parallel(watchFiles));
+//gulp.task("watch", gulp.parallel(watchFiles));
