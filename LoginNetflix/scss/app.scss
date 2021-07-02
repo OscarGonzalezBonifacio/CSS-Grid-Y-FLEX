@@ -55,5 +55,104 @@ a {
         /*nos da separacion*/
         margin-left: 2%;
     }
+
 }
 
+/*diseno del formulario*/
+.formulario-login {
+
+    @include tablet {
+        background-color: rgba(0,0,0, 0.85);
+        max-width: 420px;
+        /* de 2 rem arriba y abajo y 4 rem izquierda y derecha*/
+        padding: 2rem 4rem;
+        /* 1 rem arriba auto ala derecha 4 rem abajo y auto ala iquierda*/
+        margin: 1rem auto 4rem auto;
+
+    }
+}
+
+form {
+    legend {
+        color: $blanco;
+        font-size: 2rem;
+        margin: 2rem 0;
+        font-weight: bold;
+    }
+    .campo {
+        display: flex;
+        /*para que pueda crecer el campo*/
+        position: relative;
+        /*separacion entre los campos */
+        margin-bottom: .8rem;
+        span {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+       /*pocicionamiento del label*/
+        label {
+            position: absolute;
+            top: 1.1rem;
+            left: 1rem;
+            font-size: .9rem;
+            /*la transcicion para nimar  el font size cambia de tamano*/
+            transition: font-size .2s ease, top .2s ease;
+
+            &.valido {
+                font-size: .6rem;
+                top: .5rem;
+            }
+        }
+        /*diseno del imput*/
+        input {
+            flex: 1;
+            padding: 1.3rem 1rem .7rem 1rem;
+            border: none;
+            background-color: $gris;
+            border-radius: $radius;
+            color: $blanco;
+            &:focus {
+                background-color: $gris3;
+                /*para eliminar linea de color azul*/
+                outline: none;
+/*el ma label origina que se vaya al siguiente elemento*/
+                + label {
+                    font-size: .6rem;
+                    top: .5rem;
+                }
+            }
+        }
+    }
+
+    .submit {
+        display: flex;
+        margin-top: 2rem;
+/*cuando se a un input de tipo submit se le aplicara el siguiente selector*/
+        input[type="submit"] {
+            @include boton($primario, $blanco);
+            &:hover {
+                /*para cambiara la manita*/
+                cursor: pointer;
+            }
+        }
+    }
+    /*diseno de las acciones*/
+    .acciones {
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 0;
+        /*8 rem para darle separacion hacia abajo*/
+        margin: .5rem 0 8rem 0;
+
+        label, a {
+            font-size: .8rem;
+            text-decoration: none;
+        }
+    }
+}

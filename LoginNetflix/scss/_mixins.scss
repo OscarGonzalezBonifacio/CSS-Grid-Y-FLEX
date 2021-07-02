@@ -21,3 +21,17 @@
 @mixin box-sizing($box-model){
     box-sizing: $box-model;
 }
+/*doble color para pasar 2 parametros*/
+@mixin boton($bgcolor, $color){
+    background-color: $bgcolor;
+    color: $color;
+    display: block;
+    /*para cambior el dirrecion, cuando se necesite */
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: $radius;
+    font-size: .8rem;
+    padding: 1rem 0;
+}
