@@ -8,7 +8,7 @@ inputs.forEach(input => {
 inputs.forEach(input => {
     input.addEventListener('input', validarInput);
 });
-
+// (e) nos permite acceder al contenido que el usuario escibe
 function validarInput(e) {
 
     const estado = ['valido', 'no-valido'];
@@ -20,6 +20,7 @@ function validarInput(e) {
         clase = estado[0];
     }
     e.target.classList.remove(...estado);
+    //eliminamos la clase para poder escribir
     e.target.nextElementSibling.classList.remove(...estado);
 
     e.target.classList.add(clase);
@@ -36,7 +37,7 @@ function validarInput(e) {
             e.target.parentElement.parentElement.insertBefore(errorDiv, e.target.parentElement.nextElementSibling );
         }
     } else {
-        // limpiar el mensaje de error si existe
+        // limpiar el mensaje de error si existe la alerta y elimina el mensaje
         if(e.target.parentElement.nextElementSibling.classList[0] === 'alerta') {
             e.target.parentElement.nextElementSibling.remove();
         }
