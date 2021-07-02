@@ -159,6 +159,11 @@ form {
 
 /*diseno de la parte final del formulario*/
 .contenido-inferior {
+    /*padin hacia abajo*/
+    padding-bottom: 2rem;
+    @include tablet {
+        padding-bottom: 0;
+    }
    
     a {
         font-size: .8rem;
@@ -173,4 +178,55 @@ form {
             margin-left: .5rem;
         }
     }
+}
+/*diseno del footer*/
+.site-footer {
+    border-top: 1px solid $gris2;
+    padding: 2rem 0 4rem 0;
+    @include tablet {
+        border-top: unset;
+        background-color: rgba(0,0,0, 0.85);
+        padding: 1rem 0 3rem 0;
+    }
+    /*el contendor es mas pequeno*/
+    .contenedor {
+        @include tablet {
+            max-width: 50%;
+        }
+    }
+    .menu-footer {
+        display: flex;
+        justify-content: space-between;
+        /*para que no se vay hacia los lados*/
+        flex-wrap: wrap;
+        @include pc {
+            max-width: 60%;
+        }
+        a {
+            /*par que ca uno tome su espacio*/
+            flex: 0 0 auto;
+            font-size: .8rem;
+            margin-right: 2rem;
+            padding: .6rem 0;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+   
+}
+/*estilos al select*/
+select {
+    /*separacion superior*/
+    margin-top: 2rem;
+    /*se debe agregar esta propiedad para que termita
+    agregar valores ya se padding o broder ect*/
+    appearance: none;
+    padding: 1rem 3rem;
+    border: 1px solid $gris3;
+    border-radius: $radius;
+    font-size: .8rem;
+    background-color: $negro;
+    color: $gris2;
+}
 }

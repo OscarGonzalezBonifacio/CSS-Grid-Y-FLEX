@@ -179,6 +179,12 @@ form .acciones label, form .acciones a {
 }
 
 /*diseno de la parte final del formulario*/
+.contenido-inferior {
+  /*padin hacia abajo*/
+  padding-bottom: 2rem;
+  padding-bottom: 0;
+}
+
 .contenido-inferior a {
   font-size: .8rem;
 }
@@ -195,4 +201,62 @@ form .acciones label, form .acciones a {
   font-size: 1rem;
   color: #FFFFFF;
   margin-left: .5rem;
+}
+
+/*diseno del footer*/
+.site-footer {
+  border-top: 1px solid #8C8C8C;
+  padding: 2rem 0 4rem 0;
+  border-top: unset;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem 0 3rem 0;
+  /*el contendor es mas pequeno*/
+  /*estilos al select*/
+}
+
+.site-footer .contenedor {
+  max-width: 50%;
+}
+
+.site-footer .menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /*para que no se vay hacia los lados*/
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 60%;
+}
+
+.site-footer .menu-footer a {
+  /*par que ca uno tome su espacio*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: .8rem;
+  margin-right: 2rem;
+  padding: .6rem 0;
+}
+
+.site-footer .menu-footer a:last-of-type {
+  margin-right: 0;
+}
+
+.site-footer select {
+  /*separacion superior*/
+  margin-top: 2rem;
+  /*se debe agregar esta propiedad para que termita
+    agregar valores ya se padding o broder ect*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1rem 3rem;
+  border: 1px solid #454545;
+  border-radius: 5px;
+  font-size: .8rem;
+  background-color: #000000;
+  color: #8C8C8C;
 }
