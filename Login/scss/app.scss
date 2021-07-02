@@ -1,0 +1,250 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+    @include box-sizing(border-box);
+}
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+body {
+    background-color: $negro;
+    font-family: $fuentePrincipal;
+    /*error en el color*/
+    color: $gris2;
+
+
+    /*mixins para agregarle el tamano dependiendo el color*/
+    @include tablet {
+       /*Restablece al valor heredado unset*/
+        background-color: unset;
+        background-image: url(../img/bg.jpg);
+        /*no se repita*/
+        background-repeat: no-repeat;
+        /*para que tome todo los espacios disponibles*/
+        background-size: cover;
+        /*la posicion del backgropund*/
+        background-position: bottom center;
+
+      
+
+        }
+}
+/*Color de los enlaces y el hover es para que los dos queden juntos*/
+a {
+    color: $gris2;
+    text-decoration: none;
+  &:hover {
+     text-decoration: underline; 
+
+  }
+
+}
+/*para centrarlo y que en pequeno no tome toda la pagina genere margen*/
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+}
+/*agregamos el diseno de la alerta, alerta viene de javascript*/
+.alerta {
+    color: $secundario;
+    display: block;
+    
+    margin-bottom: .5rem;
+    padding:  .2rem;
+    font-size: .8rem;
+    text-align: center;
+}
+/*el diseno del mensaje no valido
+genera una linea, input es para eliminar linea que se
+se generaba en el mensaje*/
+input.no-valido {
+    border-bottom: 2px solid $secundario!important;
+}
+/*le damos el tamano al logo lo hacemos mas grande*/
+.logotipo {
+    margin-top: .5rem;
+    max-width: 180px;
+    @include tablet {
+        /*margen de arriba*/
+        margin-top: .8rem;
+        /*nos da separacion*/
+        margin-left: 2%;
+    }
+
+}
+
+/*diseno del formulario*/
+.formulario-login {
+
+    @include tablet {
+        background-color: rgba(0,0,0, 0.85);
+        max-width: 420px;
+        /* de 2 rem arriba y abajo y 4 rem izquierda y derecha*/
+        padding: 2rem 4rem;
+        /* 1 rem arriba auto ala derecha 4 rem abajo y auto ala iquierda*/
+        margin: 1rem auto 4rem auto;
+
+    }
+}
+
+form {
+    legend {
+        color: $blanco;
+        font-size: 2rem;
+        margin: 2rem 0;
+        font-weight: bold;
+    }
+    .campo {
+        display: flex;
+        /*para que pueda crecer el campo*/
+        position: relative;
+        /*separacion entre los campos parte inferior*/
+        margin-bottom: .8rem;
+        span {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+       /*pocicionamiento del label*/
+        label {
+            position: absolute;
+            top: 1.1rem;
+            left: 1rem;
+            font-size: .9rem;
+            /*la transcicion para nimar  el font size cambia de tamano*/
+            transition: font-size .2s ease, top .2s ease;
+
+            &.valido {
+                font-size: .6rem;
+                top: .5rem;
+            }
+        }
+        /*diseno del imput*/
+        input {
+            flex: 1;
+            padding: 1.3rem 1rem .7rem 1rem;
+            border: none;
+            background-color: $gris;
+            border-radius: $radius;
+            color: $blanco;
+            &:focus {
+                background-color: $gris3;
+                /*para eliminar linea de color azul*/
+                outline: none;
+/*el ma label origina que se vaya al siguiente elemento*/
+                + label {
+                    font-size: .6rem;
+                    top: .5rem;
+                }
+            }
+        }
+    }
+
+    .submit {
+        display: flex;
+        margin-top: 2rem;
+/*cuando se a un input de tipo submit se le aplicara el siguiente selector*/
+        input[type="submit"] {
+            @include boton($primario, $blanco);
+            &:hover {
+                /*para cambiara la manita*/
+                cursor: pointer;
+            }
+        }
+    }
+    /*diseno de las acciones*/
+    .acciones {
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 0;
+        /*8 rem para darle separacion hacia abajo*/
+        margin: .5rem 0 8rem 0;
+
+        label, a {
+            font-size: .8rem;
+            text-decoration: none;
+        }
+    }
+}
+
+/*diseno de la parte final del formulario*/
+.contenido-inferior {
+    /*padin hacia abajo*/
+    padding-bottom: 1rem;
+    @include tablet {
+        padding-bottom: 0;
+    }
+   
+    a {
+        font-size: .8rem;
+    }
+    .nuevo-usuario {
+        font-size: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        a {
+            font-size: 1rem;
+            color: $blanco;
+            margin-left: .5rem;
+        }
+    }
+}
+/*diseno del footer*/
+.site-footer {
+    border-top: 1px solid $gris2;
+    padding: 2rem 0 4rem 0;
+    @include tablet {
+        border-top: unset;
+        background-color: rgba(0,0,0, 0.85);
+        padding: 1rem 0 3rem 0;
+    }
+    /*el contendor es mas pequeno*/
+    .contenedor {
+        @include tablet {
+            max-width: 50%;
+        }
+    }
+    .menu-footer {
+        display: flex;
+        justify-content: space-between;
+        /*para que no se vay hacia los lados*/
+        flex-wrap: wrap;
+        @include pc {
+            max-width: 60%;
+        }
+        a {
+            /*par que ca uno tome su espacio*/
+            flex: 0 0 auto;
+            font-size: .8rem;
+            margin-right: 2rem;
+            padding: .6rem 0;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+   
+}
+/*estilos al select*/
+select {
+    /*separacion superior*/
+    margin-top: 2rem;
+    /*se debe agregar esta propiedad para que termita
+    agregar valores ya se padding o broder ect*/
+    appearance: none;
+    padding: 1rem 3rem;
+    border: 1px solid $gris3;
+    border-radius: $radius;
+    font-size: .8rem;
+    background-color: $negro;
+    color: $gris2;
+}
+}
