@@ -63,7 +63,7 @@ a {
 
     @include tablet {
         background-color: rgba(0,0,0, 0.85);
-        max-width: 420px;
+        max-width: 400px;
         /* de 2 rem arriba y abajo y 4 rem izquierda y derecha*/
         padding: 2rem 4rem;
         /* 1 rem arriba auto ala derecha 4 rem abajo y auto ala iquierda*/
@@ -153,6 +153,24 @@ form {
         label, a {
             font-size: .8rem;
             text-decoration: none;
+        }
+    }
+}
+
+/*diseno de la parte final del formulario*/
+.contenido-inferior {
+   
+    a {
+        font-size: .8rem;
+    }
+    .nuevo-usuario {
+        font-size: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        a {
+            font-size: 1rem;
+            color: $blanco;
+            margin-left: .5rem;
         }
     }
 }
