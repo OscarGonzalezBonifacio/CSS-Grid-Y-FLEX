@@ -4,13 +4,49 @@ html {
 }
 
 *,
-*:after
+*:after,
 *:before {
   box-sizing: inherit;
 }
 
 body {
-  background-color: red;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #323232;
   /*mixins para agregarle el tamano dependiendo el color*/
-  background-color: orange;
+  /*Restablece al valor heredado unset*/
+  background-color: unset;
+  background-image: url(../img/bg.jpg);
+  /*no se repita*/
+  background-repeat: no-repeat;
+  /*para que tome todo los espacios disponibles*/
+  background-size: cover;
+  /*la posicion del backgropund*/
+  background-position: bottom center;
+}
+
+/*Color de los enlaces y el hover es para que los dos queden juntos*/
+a {
+  color: #8C8C8C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*para centrarlo y que en pequeno no tome toda la pagina genere margen*/
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*le damos el tamano al logo lo hacemos mas grande*/
+.logotipo {
+  margin-top: .5rem;
+  max-width: 180px;
+  /*margen de arriba*/
+  margin-top: .8rem;
+  /*nos da separacion*/
+  margin-left: 2%;
 }

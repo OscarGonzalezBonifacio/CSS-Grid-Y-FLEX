@@ -11,7 +11,7 @@
 <body>
 
 <header class="site-header">
-    <img src="img/logo.svg" alt="logotipo">
+    <img src="img/logo.svg" alt="logotipo" class="logotipo">
 </header>
 <main class="formulario-login contenedor">
     <form action="#">
@@ -23,6 +23,7 @@
         <div class="campo">
             <input type="password" id="password">
             <label>Contraseña</label>
+            <span>Mostrar</span>
         </div>
         <div class="submit">
             <input type="submit" value="Iniciar sesion">
@@ -48,9 +49,9 @@
     <div class="contenido-inferior">
         <a href="#">Iniciar sesion con facebook</a>
         <a href="#" class="nuevo-usuario">
-            Primer vez en netflix?
-            <span>Susucribe ya</span>
-        </a>
+            <p class="nuevo-usuario">
+                ¿Primera vez en Netflix? <a href="#">Suscríbete ya</a> 
+            </p>
     </div>
 </main>
 <!--inicia el footer-->
