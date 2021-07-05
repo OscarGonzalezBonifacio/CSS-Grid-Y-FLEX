@@ -28,6 +28,95 @@ img {
     max-width: 100%;
 }
 
+/*agregamos el hero*/
+.hero {
+    background-image: url(../img/hero.jpg);
+    /*para tomar toda la altura disponible de la pantalla*/
+     height: 100vh;
+     /*por default se repiten*/
+     background-repeat: no-repeat;
+     background-position: center center;
+     /*para que tome todo el ancho*/
+     background-size: cover;
+     /*el efecto fixed*/
+     background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    /*si se utiliza row, se puede permitir usar
+    justify-content te permite alinear horizontalmen*/
+    flex-direction: column;
+
+    /*para alinear verticalmente se utilizo conlumn*/
+    justify-content: center;
+}
+
+.barra  {
+    
+    background-color: #008fd1;
+    padding: 1rem 0;
+    top: 1rem;
+    
+    position:absolute;
+    width: 100%;
+}
+/*cuando se pequeno en columna y cuando se grande sea en fila*/
+.barra .contenedor {
+    display: flex;
+    flex-direction: column;
+
+}
+@media screen and (min-width:768px) {
+    .barra .contenedor {
+        flex-direction: row;
+        /*para mandarlo al lado izquierdo*/
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo-img {
+    max-width: 17rem;
+
+}
+
+
+/*para que tome los dos estilos*/
+.logo, .navegacion {
+
+    text-align: center;
+}
+
+.navegacion ul {
+    /*para remover el punto*/
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:768px) {
+    .navegacion {
+        /*toma el espacio restante flex: 1; */
+        flex:0 0 20rem;
+        
+
+        }
+        .navegacion ul {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+      
+    }
+
+
+
+
+
 /* Contenido */
 .contenido {
     background-color: white;
