@@ -28,6 +28,65 @@ img {
     max-width: 100%;
 }
 
+.contenido {
+    background-color: white;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: center;
+}
+.contenido h3 {
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+.contenido span {
+    color:#db008d;
+}
+
+.boton {
+    background-color: #008fd1;
+    color: white;
+    padding: .6rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@media screen and (min-width:480px) {
+    .contenido-principal {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .entrada {
+        flex: 0 1 calc(50% - 1rem);
+
+    }
+}
+
+@media screen and (min-width:768px) {
+    .entrada {
+        flex: 0 1 calc(33% - 1rem);
+    }
+}
+
+.header {
+    padding-top: 3rem;
+
+    
+    position: relative;
+    display: flex;
+    /*si se utiliza row, se puede permitir usar
+    justify-content te permite alinear horizontalmen*/
+    flex-direction: column;
+
+    /*para alinear verticalmente se utilizo conlumn*/
+    justify-content: center;
+}
+
+
+
 /*agregamos el hero*/
 .hero {
     background-image: url(../img/hero.jpg);
@@ -42,16 +101,6 @@ img {
      background-attachment: fixed;
 }
 
-.header {
-    display: flex;
-    position: relative;
-    /*si se utiliza row, se puede permitir usar
-    justify-content te permite alinear horizontalmen*/
-    flex-direction: column;
-
-    /*para alinear verticalmente se utilizo conlumn*/
-    justify-content: center;
-}
 
 .barra  {
     
@@ -81,7 +130,7 @@ img {
 }
 
 .logo-img {
-    max-width: 17rem;
+    max-width: 300px;
 
 }
 
@@ -117,48 +166,4 @@ img {
 
 
 
-/* Contenido */
-.contenido {
-    background-color: white;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-.contenido {
-    padding: 1rem;
-    text-align: center;
-}
-.contenido h3 {
-    text-align: center;
-    font-size: .9rem;
-    line-height: 1.4rem;
-}
-.contenido span {
-    color:#db008d;
-}
-.boton {
-    background-color: #008fd1;
-    color: white;
-    padding: .6rem 2rem;
-    margin-top: 1rem;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-@media screen and (min-width:480px) {
-    .contenido-principal {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .entrada {
-        flex: 0 1 calc(50% - 1rem);
-
-    }
-}
-
-@media screen and (min-width:768px) {
-    .entrada {
-        flex: 0 1 calc(33% - 1rem);
-    }
-}
 
