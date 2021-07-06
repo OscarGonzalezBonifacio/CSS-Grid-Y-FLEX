@@ -5,5 +5,6 @@ Apuntes de Manejo de FlexBox Basicos
 3. Diseño de Menus https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Diseño%20de%20Menus/index.html
 4. Diseño de Carrito de Ventas https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Carrito/index.html
 5. Diseño del Login Netflix  https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/LoginNetflix/index.html
+6. Diseno de Blog Basico https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/DisenoBlog/index.html
 
 
