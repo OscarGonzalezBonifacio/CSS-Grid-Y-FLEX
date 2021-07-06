@@ -71,6 +71,59 @@ img {
     }
 }
 
+/** Categorias **/
+.categorias ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    /*eliminar las vinetas*/
+    list-style: none;
+}
+
+.categorias ul li {
+    /*dos elemntos arriba dos elmentos abajo*/
+    flex: 1 0 calc(50% - 1rem);
+    padding: 2rem;
+}
+/*li:nth para diferenciar los elemtos y darles
+diseno */
+.categorias ul li:nth-child(1) {
+    background-color: #008fd1;
+}
+.categorias ul li:nth-child(2) {
+    background-color: #db008d;
+}
+.categorias ul li:nth-child(3) {
+    background-color: #9800d1;
+}
+.categorias ul li:nth-child(4) {
+    background-color: #eca300;
+}
+@media screen and (min-width:768px) {
+    .categorias ul li {
+        /*el espacio 25%*/
+        flex: 1 0 calc(25% - 1rem);
+    }
+}
+
+.categorias ul li a {
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.categorias ul li i {
+    /*darle el tamano*/
+    font-size: 3rem;
+    /*separacion entre el icono y el texto*/
+    margin-bottom: 1rem;
+}
+
+
+
+
 .header {
     padding-top: 3rem;
 
@@ -159,8 +212,33 @@ img {
             flex-direction: row;
             justify-content: space-between;
         }
+        @media screen and (min-width:768px) {
+            .navegacion ul{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        /*diseno de navegacion en 768px*/
+        .navegacion ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-contenido .contenedor{
+            display: flex;
+         
+        }
+        /*para el blog de viajes*/
+        .header-contenido h1 {
+            padding: 2rem;
+            color:#008fd1;
+            text-transform: uppercase;
+            font-size: 3rem;
+            max-width: 40rem;
+        }
       
     }
+    
 
 
 
