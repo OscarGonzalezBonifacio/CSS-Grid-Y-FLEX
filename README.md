@@ -7,5 +7,9 @@ Apuntes de Manejo de FlexBox Basicos
 5. Diseño del Login Netflix  https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/LoginNetflix/index.html
 6. Diseno de Blog Basico https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/DisenoBlog/index.html
 7. Diseño HolyGrail https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/DisenoHolyGrail/index.html
+8. Diseño Mansory https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/index.html
+9. Diseño Comentario https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/comentario.html
+10. Diseño Footer https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/footer.html
+11. Diseño de Verticales https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/centrado-vertical.html
 
 
