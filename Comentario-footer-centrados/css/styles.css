@@ -44,14 +44,16 @@ h2 {
 
 /** Footer **/
 .pagina {
-    max-width: 800px;
+    max-width:1200px;
     margin:0 auto;
 
-    /* Flex aqui*/
+    /* Flex aqui, es para aplicar la tecnica del footer es desde el body
+     ys eutilizan las 3 funciones a continuacion para que funcione*/
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
 }
+/*para selecionar al primer hijo de cada uno*/
 .pagina > * {
     padding: 1rem;
 }
@@ -60,6 +62,8 @@ h2 {
 }
 .pagina .contenido-principal {
     background-color: #B2DFDB;
+    /*es parte del diseno del footer, para que toda la pgina principal 
+    tenga todo el contenido disponible*/
     flex: 1;
 }
 .pagina .footer {
@@ -71,16 +75,21 @@ h2 {
 /** Centrado **/
 
 .centrado {
+    /*para poder centrarlo relamente*/
     min-height: 100vh;
     background-image: url(../img/hamburguesa.jpg);
+    /*para permitir que no se repite y si la imagen es muy grande
+    se mire correctamente*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    /*para centrarlo horizontal*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/*el centrado que seleciona solo al primer
+nivel de hijos*/
 .centrado > div {
     flex: 0 0 calc(33.3% - 3rem);
 }
@@ -112,6 +121,7 @@ h2 {
 }
 .arriba {
     align-self: flex-start;
+    /*para el margen*/
     margin-top: 1rem;
 }
 .abajo {
