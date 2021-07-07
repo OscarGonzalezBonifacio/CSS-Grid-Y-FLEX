@@ -6,4 +6,83 @@ html {
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    /*todo hacia abajo*/
+    display: flex;
+    flex-direction: column;
+}
+/*para ser las imagenes responsive*/
+img {
+    max-width: 100%;
+}
+.encabezado-sitio {
+    /*arriba y abajo de 2 rem y 
+    0 ala izquierda y derecha*/
+    padding: 2rem 0;
+}
+.logo {
+   max-width: 80%;
+   display: block;
+   margin: 0 auto;
+}
+
+.navegacion {
+    background-color: #05bae6;
+    padding: 1rem 0;
+}
+.navegacion ul {
+    max-width: 800px;
+    /*para centrar el navegador*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    flex-direction: column;
+}
+@media screen and (min-width:768px) {
+    .navegacion ul{
+        flex-direction: row;
+    }
+}
+.navegacion ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.contenido-principal {
+    max-width: 50%;
+    margin:0 auto;
+    margin-bottom: 2rem;
+}
+.sidebar {
+    background-color: #e5e5e5;
+    padding: 2rem;
+}
+/*para agregar el flex dentro del contenido*/
+/*todo lo que este en contenido puede ser cambiado por
+comando orden*/
+@media screen and (min-width:768px) {
+    .contenido {
+        display: flex;
+    }
+    .contenido-principal {
+        /*lo colocamos al lado derecho*/
+        order: 2;
+    }
+    .sidebar {
+        /*para cambiarlo al lado izquierdo*/
+        order:1;
+        /* 0 para que no creca 0 pero ?? 
+        base para el 25%*/
+        flex: 0 0 25%;
+    }
+    .derecha{
+        order:3;
+    }
+}
+
+
+.footer {
+    background-color: #db008d;
+    text-align: center;
+    color:white;
 }
