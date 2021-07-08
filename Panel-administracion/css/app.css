@@ -25,3 +25,151 @@ img {
 .oculto {
   display: none;
 }
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+}
+
+/*para que tome toda la altura de la pagina*/
+.pagina {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*con el colum queda abajo el main, sin el queda arriba*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*configuracion del header y del flex*/
+}
+
+.header .nombre-sitio {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 5rem;
+  flex: 0 0 5rem;
+  background-color: #003f8c;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header .nombre-sitio {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20rem;
+    flex: 0 0 20rem;
+  }
+}
+
+.header h1 {
+  color: #FFFFFF;
+  /*para que no este muy alto*/
+  margin: 0;
+}
+
+.header .escritorio {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header .escritorio {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header .movil {
+    display: none;
+  }
+}
+
+.barra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*queda del lado derecho*/
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /*para que la barra tome el resto del contenido*/
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #005b9f;
+  padding: 1rem;
+}
+
+.barra .menu-izquierdo {
+  /*centrada en vertical la flecha*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.barra .menu-derecho {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*son los enlaces en forma de caja*/
+}
+
+.barra .menu-derecho .caja {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*dentro de la caja para centrarlos*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.barra .menu-derecho .caja:hover {
+  background-color: #004c86;
+}
+
+.barra .menu-derecho .caja a {
+  color: #FFFFFF;
+  text-decoration: none;
+  /*diseno del padding*/
+}
+
+.barra .menu-derecho .caja a span {
+  background-color: #009045;
+  border-radius: 50%;
+  padding: .5rem;
+  /*separacion de lado izquierdo*/
+  margin-left: .5rem;
+}
+
+.contenido-principal {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}

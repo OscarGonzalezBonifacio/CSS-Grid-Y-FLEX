@@ -1,3 +1,105 @@
 @import 'variables';
 @import 'mixins';
 @import 'custom';
+html{
+    @include box-sizing(border-box);
+    height: 100%;
+}
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+body {
+    font-family: $fuente_principal;
+    height: 100%;
+}
+/*para que tome toda la altura de la pagina*/
+.pagina {
+    min-height: 100%;
+    display: flex;
+    /*con el colum queda abajo el main, sin el queda arriba*/
+
+    flex-direction: column;
+
+}
+
+.header {
+    display: flex;
+
+    .nombre-sitio {
+        flex: 0 0 5rem;
+        @include pc {
+            flex: 0 0 20rem;
+
+        }
+        background-color: $secundario;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+    }
+    h1{
+        color: $blanco;
+        /*para que no este muy alto*/
+        margin: 0;
+    }
+    /*configuracion del header y del flex*/
+    .escritorio {
+        display: none;
+        @include pc {
+            display: block;
+        }
+
+    }
+    .movil {
+        @include pc {
+            display: none;
+        }
+
+    }
+
+}
+.barra {
+    display: flex;
+    /*queda del lado derecho*/
+    justify-content: space-between;
+    /*para que la barra tome el resto del contenido*/
+    flex: 1;
+    background-color: $primario;
+    padding: 1rem;
+    .menu-izquierdo {
+        /*centrada en vertical la flecha*/
+        display: flex;
+        align-items: center;
+    }
+    .menu-derecho {
+        display: flex;
+        /*son los enlaces en forma de caja*/
+        .caja {
+            padding: 0 1rem;
+            display: flex;
+            /*dentro de la caja para centrarlos*/
+            align-items: center;
+           
+            &:hover {
+                background-color: darken($primario, 5);
+            }
+            a {
+                color: $blanco;
+                text-decoration: none;
+                /*diseno del padding*/
+                span {
+                    background-color: $terciario;
+                    border-radius: 50%;
+                    padding: .5rem;
+                    /*separacion de lado izquierdo*/
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+}
+.contenido-principal {
+    flex: 1;
+}
