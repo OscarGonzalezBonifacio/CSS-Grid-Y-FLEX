@@ -168,8 +168,63 @@ body {
   margin-left: .5rem;
 }
 
-.contenido-principal {
+.sidebar {
+  background-color: #373737;
+  /*usamos la misma base .nombre-sitio*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20rem;
+  flex: 0 0 20rem;
+  padding: 1rem;
+  color: #FFFFFF;
+  /*dentro del sibebar*/
+}
+
+.sidebar .usuario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*para colocar un aladop izquierdo y el otro alado derecho*/
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /*el diseno del parrafo*/
+  font-weight: normal;
+}
+
+.sidebar .usuario img {
+  max-width: 5rem;
+}
+
+.sidebar .usuario span {
+  font-weight: bold;
+  /*para acomodarlo debajo del  parrafo*/
+  display: block;
+}
+
+.sidebar .buscador {
+  margin-top: 1rem;
+  /*este solo selecciona el tipo de texto*/
+}
+
+.sidebar .buscador input[type="text"] {
+  width: 100%;
+  /*alto*/
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  /*para que el spaceholder se comode un poco a la izquierda*/
+  padding-left: 1rem;
+}
+
+/*contiene 2 elementos el siber y el contenido*/
+.contenedor-principal {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
