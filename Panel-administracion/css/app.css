@@ -42,6 +42,13 @@ body {
   height: 100%;
 }
 
+/*para disminuir el menu, la clase .no-menu viene de agregarse 
+de javascript*/
+.no-menu.pagina .sidebar {
+  margin-left: -20rem;
+  /*agrgamos la transcicion en siber mas abajo*/
+}
+
 /*para que tome toda la altura de la pagina*/
 .pagina {
   min-height: 100%;
@@ -130,6 +137,17 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 1 rem;
+  /* es para que se oculte*/
+}
+
+.barra .menu-izquierdo i {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+
+.barra .menu-izquierdo .fa-arrow-left {
+  display: none;
 }
 
 .barra .menu-derecho {
@@ -176,6 +194,9 @@ body {
   flex: 0 0 20rem;
   padding: 1rem;
   color: #FFFFFF;
+  /*transicion para el efecto del menu*/
+  -webkit-transition: margin-left .3s ease;
+  transition: margin-left .3s ease;
   /*dentro del sibebar*/
 }
 
@@ -217,6 +238,57 @@ body {
   border-radius: 10px;
   /*para que el spaceholder se comode un poco a la izquierda*/
   padding-left: 1rem;
+}
+
+.sidebar .memu-admin {
+  /*para darle separacion*/
+  margin-top: 2rem;
+}
+
+.menu-admin .menu {
+  list-style: none;
+  padding: 0 0 0 1rem;
+}
+
+.menu-admin .menu > li {
+  padding: .5rem;
+  /*subnivel*/
+}
+
+.menu-admin .menu > li:hover ul {
+  display: block;
+}
+
+.menu-admin .menu > li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: .5rem;
+  /*efecto del salto*/
+  -webkit-transition: padding-left .3s ease;
+  transition: padding-left .3s ease;
+  /*le da el fecto de salto*/
+}
+
+.menu-admin .menu > li a:hover {
+  background-color: #005b9f;
+  padding-left: 2rem;
+}
+
+.menu-admin .menu > li ul {
+  display: none;
+  margin-top: 1rem;
+  list-style: none;
+  background-color: #2f2f2f;
+  padding: 1rem;
+}
+
+.menu-admin .menu > li ul li {
+  margin-bottom: 1rem;
+  /*le aplica al ultimo elemnto del margin de cero 0*/
+}
+
+.menu-admin .menu > li ul li:last-of-type {
+  margin-bottom: 0;
 }
 
 /*contiene 2 elementos el siber y el contenido*/

@@ -14,6 +14,17 @@ body {
     font-family: $fuente_principal;
     height: 100%;
 }
+/*para disminuir el menu, la clase .no-menu viene de agregarse 
+de javascript*/
+.no-menu.pagina {
+    .sidebar {
+        margin-left: -20rem;
+        /*agrgamos la transcicion en siber mas abajo*/
+       
+    }
+}
+
+
 /*para que tome toda la altura de la pagina*/
 .pagina {
     min-height: 100%;
@@ -72,6 +83,16 @@ body {
         /*centrada en vertical la flecha*/
         display: flex;
         align-items: center;
+        padding: 1 rem;
+        i {
+            color: $blanco;
+            font-size: 1.2rem;
+        }
+   /* es para que se oculte*/
+    .fa-arrow-left {
+        display: none;
+    }
+
     }
     .menu-derecho {
         display: flex;
@@ -106,6 +127,8 @@ body {
     flex: 0 0 20rem;
     padding: 1rem;
     color: $blanco;
+    /*transicion para el efecto del menu*/
+    transition: margin-left .3s ease;
 
     .usuario {
         display: flex;
@@ -142,6 +165,58 @@ body {
 
 }
 
+.memu-admin {
+    /*para darle separacion*/
+    margin-top: 2rem;
+
+}
+
+}
+
+.menu-admin {
+     .menu {
+         list-style: none;
+         padding: 0 0 0 1rem;
+
+         > li {
+             padding: .5rem;
+             &:hover {
+
+             ul{
+                 display: block;
+             }
+         }
+         a {
+             color: $blanco;
+             text-decoration: none;
+             padding: .5rem;
+             /*efecto del salto*/
+             transition: padding-left .3s ease;
+              /*le da el fecto de salto*/
+         &:hover {
+            background-color: $primario;
+            padding-left: 2rem;
+        }
+         }
+        /*subnivel*/
+         ul{
+             display: none;
+             margin-top: 1rem;
+             list-style: none;
+             background-color: darken($grisOscuro, 3);
+             padding: 1rem;
+             li {
+                 margin-bottom: 1rem;
+                 /*le aplica al ultimo elemnto del margin de cero 0*/
+                 &:last-of-type {
+                     margin-bottom: 0;
+                 }
+             }
+         }
+
+        }
+
+     }
 }
 
 
