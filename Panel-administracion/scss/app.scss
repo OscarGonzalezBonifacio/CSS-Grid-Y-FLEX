@@ -1,7 +1,6 @@
 @import 'variables';
 @import 'mixins';
-@import 'custom';
-html{
+html {
     @include box-sizing(border-box);
     height: 100%;
 }
@@ -13,7 +12,11 @@ html{
 body {
     font-family: $fuente_principal;
     height: 100%;
+    background-color: $gris;
 }
+
+
+
 /*para disminuir el menu, la clase .no-menu viene de agregarse 
 de javascript*/
 .no-menu.pagina {
@@ -40,20 +43,21 @@ de javascript*/
 
     .nombre-sitio {
         flex: 0 0 5rem;
+        
         @include pc {
             flex: 0 0 20rem;
 
         }
         background-color: $secundario;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
+        padding-left: 1rem;
+    
 
     }
     h1{
         color: $blanco;
-        /*para que no este muy alto*/
-        margin: 0;
+        /*para que no este muy alto 
+         margin: 0;*/
+       
     }
     /*configuracion del header y del flex*/
     .escritorio {
@@ -70,28 +74,34 @@ de javascript*/
 
     }
 
+    .barra {
+        display: flex;
+        /*para que la barra tome el resto del contenido*/
+        flex: 1;
+        
+        /*queda del lado derecho*/
+        justify-content: space-between;
+        
+        background-color: $primario;
+    }
 }
-.barra {
-    display: flex;
-    /*queda del lado derecho*/
-    justify-content: space-between;
-    /*para que la barra tome el resto del contenido*/
-    flex: 1;
-    background-color: $primario;
-    padding: 1rem;
+
+   
     .menu-izquierdo {
         /*centrada en vertical la flecha*/
         display: flex;
         align-items: center;
-        padding: 1 rem;
+
+        .fa-arrow-right {
+            display: none;
+        }
+        
         i {
             color: $blanco;
             font-size: 1.2rem;
         }
    /* es para que se oculte*/
-    .fa-arrow-left {
-        display: none;
-    }
+    
 
     }
     .menu-derecho {
@@ -105,10 +115,15 @@ de javascript*/
            
             &:hover {
                 background-color: darken($primario, 5);
+                
             }
+        }
             a {
+                
                 color: $blanco;
                 text-decoration: none;
+                justify-content: center;
+                position: relative;
                 /*diseno del padding*/
                 span {
                     background-color: $terciario;
@@ -117,10 +132,9 @@ de javascript*/
                     /*separacion de lado izquierdo*/
                     margin-left: .5rem;
                 }
-            }
         }
     }
-}
+
 .sidebar {
     background-color: $grisOscuro;
     /*usamos la misma base .nombre-sitio*/
@@ -165,15 +179,19 @@ de javascript*/
 
 }
 
-.memu-admin {
-    /*para darle separacion*/
-    margin-top: 2rem;
 
-}
 
 }
 
 .menu-admin {
+
+    margin-top: 1rem;
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
      .menu {
          list-style: none;
          padding: 0 0 0 1rem;
@@ -196,6 +214,7 @@ de javascript*/
          &:hover {
             background-color: $primario;
             padding-left: 2rem;
+            cursor: pointer;
         }
          }
         /*subnivel*/
@@ -225,4 +244,79 @@ de javascript*/
     flex: 1;
     display: flex;
 }
+
+/**/
+.contenido {
+    flex: 1;
+    padding: 2rem;
+}
+.formulario {
+    display: flex;
+    /*una vez que llega al limite lo acomoda abajo*/
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    .campo {
+        margin-bottom:  1rem;
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /*otra informacion lo coloca en la parte superior*/
+        align-items: flex-start;
+        
+
+
+
+        
+        @include tablet {
+            flex: 0 0 calc(50% - 1rem);
+
+        }
+        
+        /*cuando ambos est junta en este ejemplo
+        campo y expadir se cumple esta condicion*/
+        &.expandir {
+            flex: 0 0 calc(100% - 1rem);
+            
+            
+            label {
+                flex: 0 0 calc(12.5%);
+            }
+            textarea {
+                flex: 1;
+
+            }
+        }
+        label {
+            flex: 0 0 25%;
+        }
+
+        input[type="text"]{
+            flex: 1 0 75%
+        
+        }
+        .opciones {
+            display: flex;
+            flex-wrap: wrap;
+            flex:  1;
+            /*para generar separacion*/
+            label {
+                padding-left: 1rem;
+            }
+
+        }
+        /*& por que esta dentro de un campo*/
+        &.enviar{
+            display: flex;
+            justify-content: flex-end;
+            .boton {
+                @include boton($primario)
+
+            }
+
+        }
+    }
+}
+
    

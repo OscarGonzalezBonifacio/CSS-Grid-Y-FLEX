@@ -34,8 +34,8 @@
 }
 
 @mixin box-sizing($box-model) {
-            box-sizing: $box-model;
+    box-sizing: $box-model;
 }
 @mixin gradiente($color1, $color2) {
-    background: linear-gradient(to right, $color1 0%, $color2 100%);
+background: linear-gradient(to right, $color1 0%, $color2 100%);
 }
