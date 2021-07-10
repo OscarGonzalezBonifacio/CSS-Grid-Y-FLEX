@@ -1,0 +1,33 @@
+
+h2 {
+    margin: 0;
+}
+.servicios {
+    border: 3px solid black;
+    height: 300px;
+    display: grid;
+    /*en grid se toma primero los row 
+    luego las column*/
+    grid: 50% 50% / 33% 33% 33%;
+
+}
+
+.servicio {
+    color: white;
+    text-align: center;
+}
+
+.servicio-1 {
+    background-color: darkviolet;
+    /*el grid are primero es la fila d einicio luego 
+    la columna inicio y en el siguiente serian
+    los ends*/
+    grid-area: 1/1/3/3;
+}
+
+.servicio-2 {
+    background-color: limegreen;
+}
+.servicio-3 {
+    background-color: teal;
+}
