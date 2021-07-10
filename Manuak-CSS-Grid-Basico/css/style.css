@@ -1,0 +1,64 @@
+
+h2 {
+    margin: 0;
+}
+.servicios {
+    border: 3px solid black;
+    /*para habilitar ccs grid*/
+    display: grid;
+    /*para crear columnas en css grid*/
+    grid-template-columns: 50% 50%;
+    /*que tenga dos filas de 50 y 50*/
+    grid-template-rows: 50% 50%;
+    height: 200px;
+}
+
+@media screen and (min-width:768px) {
+    .servicios {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 33% 33% 33% ;
+    }
+    
+}
+
+.servicio {
+    color: white;
+    text-align: center;
+}
+
+.servicio-1 {
+    
+    background-color: darkviolet;
+    /*para pocicionar el grid del servicio 1
+    en el servicio2, este ejemplo tiene 4 lineas de incio el primer parametro es
+    para la linea de incio ejemplo 1 y finaliza en la 3*/
+    grid-column-start:1;
+    grid-column-end: 2;
+    /*que expanda verticalmente se cuentan las lineas verticales*/
+    grid-row: 1 / 5;
+  
+    /*se puede utiliozar span  grid-row: 1 /span 4; 
+    solamente saltara las lineas siguiente*/
+}
+
+@media screen and (min-width:768px){
+
+    .servicio-1 {
+        grid-row: 1/4;
+
+    }
+    .servicio-2 {
+        grid-row: 1/4;
+        grid-column: 2/4;
+    }
+
+    
+}
+.servicio-2 {
+    background-color: limegreen;
+   
+}
+.servicio-3 {
+    background-color: teal;
+   
+}
