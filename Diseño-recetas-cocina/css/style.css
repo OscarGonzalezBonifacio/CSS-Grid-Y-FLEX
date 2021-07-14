@@ -8,6 +8,12 @@ body {
     box-sizing: inherit;
 }
 
+/*para centrar todo el contenido*/
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
@@ -86,3 +92,59 @@ blockquote {
 }
 
 /** Grid aqui**/
+.navegacion nav {
+    display: grid;
+    /*minimo 200 px maximo 1 fr*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+@media screen and (min-width:768px){
+
+.contenido-principal {
+    display:grid;
+    /*mas contene se encarga de cual es el contenido maximo
+    en base ala imagen, primer columna base central y la de 
+    la derecha*/
+    
+    grid-template-columns: minmax(100px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4.auto);
+    /*para la separacion*/
+    gap: 1rem;
+
+}
+.titulo {
+    grid-column: 1/4;
+}
+.informacion {
+    /*se coloca abajo de titulo*/
+    grid-row: 2/3;
+
+}
+.imagen1 {
+    /*para posicionarla bien primero debe ser el contenido*/
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+
+
+}
+
+.imagen2 {
+    grid-row: 4/5;
+}
+
+
+.entrada {
+    grid-column: 2/3;
+    grid-row: 2/5;
+
+}
+    
+}
+
+.footer .contenedor {
+    display: grid;
+    /**/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     
+}
+
