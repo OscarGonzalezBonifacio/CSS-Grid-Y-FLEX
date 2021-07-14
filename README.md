@@ -11,6 +11,7 @@ Apuntes de Manejo de FlexBox Basicos
 9. Diseño Comentario https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/comentario.html
 10. Diseño Footer https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/footer.html
 11. Diseño de Verticales https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Comentario-footer-centrados-Mansory/centrado-vertical.html
-12. Diseño de Sistema Administrativo: https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Panel-administracion/index.html
+12. Diseño de Sistema Administrativo(Flexbox): https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Panel-administracion/index.html
+13. Diseño de Pagina de Cocina(Grid CSS): https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Diseño-recetas-cocina/index.html
 
 
