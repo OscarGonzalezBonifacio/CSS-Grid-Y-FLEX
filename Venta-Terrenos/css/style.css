@@ -92,6 +92,7 @@ p {
     color: var(--claro);
     text-decoration: none;
     font-size: 1.2rem;
+   
     
    
 }
@@ -99,7 +100,7 @@ p {
     .header .barra {
         /*el primero es del logo el tercero la navegacion
         el i fr es el restante es decir el espacio en medio*/
-        grid-template-columns: 30% 1fr 35%;
+        grid-template-columns: 30% 1fr 40%;
         justify-content: space-around;
         /*eliminamos el segundo row*/
         grid-template-rows: unset;
@@ -113,6 +114,8 @@ p {
         grid-column: 3/4;
         display: grid;
         justify-content: center;
+        text-align: right;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     
 
     }
