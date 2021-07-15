@@ -1,7 +1,9 @@
 /*la form a de declarara la variable en css*/
 :root {
-    --primario: rgb(46, 219, 46);
-    --secundario: orange;
+    
+    --primario: #7abe47;
+    --secundario: #ffc845;
+    
     --negro: black;
     --claro: white;
     --gris: rgb(202, 196, 196);
@@ -13,11 +15,57 @@
 
 body {
     background-color: var(--gris);
+    font-family: 'Roboto', sans-serif;
 }
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
 }
+img {
+    max-width: 100%;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 300;
+    /*reseteo de margenes*/
+    margin: 1rem 0 1rem 0;
+}
+h1 {
+    font-size: 2.4rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    /*genera in interlineado mayor*/
+    line-height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.boton {
+    background-color: var(--primario);
+    display: block;
+    padding: var(--pading);
+    text-align: center;
+    color: var(--claro);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--primario);
+    transition: all .5s ease-in-out;
+}
+
+.boton:hover {
+    
+    background-color:  var(--claro);
+    color: var(--primario);
+
+}
+
 .header {
     margin-top: 2rem;
     background-color: var(--primario);
@@ -28,32 +76,37 @@ body {
     display: grid;
     /*definido como rows*/
     grid-template-rows: repeat(2, auto);
-    row-gap: 2rem;
+    row-gap: 3rem;
     justify-content: center;
 }
 
 .header .menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr ));
+    justify-content: center;
 }
 
 /*estilo para los enlaces*/
 .header .menu a {
-    text-align: center;
+    
     color: var(--claro);
     text-decoration: none;
     font-size: 1.2rem;
+    
+   
 }
-@media (min-width: 992px) {
+@media (min-width:992px) {
     .header .barra {
         /*el primero es del logo el tercero la navegacion
-        el i fr es el restante*/
-        grid-template-columns: 30% 1fr 30%;
+        el i fr es el restante es decir el espacio en medio*/
+        grid-template-columns: 30% 1fr 35%;
         justify-content: space-around;
         /*eliminamos el segundo row*/
         grid-template-rows: unset;
-
-
+    }
+  
+    .header .nombre-sitio {
+        grid-column: 1 / 3;
     }
     /*hay 3 espacio pocicionar el menu en el 3/4*/
     .header .menu {
@@ -65,4 +118,140 @@ body {
     }
 
 }
+.nosotros {
+     text-align: center;
+     margin-top: 2rem;
+}
+@media (min-width: 768px){
+    .nosotros {
+        display: grid;
+        /*esto genera dos columnas de 50% 3/3*/
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        /*centado el texto alado izquierdo*/
+        text-align: left;
+    }
+    
+}
+.contenido-nosotros {
+    display: grid;
+    /*para que lo centre verticalemnte*/
+    justify-content: center;
+}
+.contenido-nosotros h2{
+    font-size: 3rem;
+    font-weight: 300;
+}
 
+
+.venta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+     gap: 1rem;
+}
+
+.venta img {
+    width: 100%;
+}
+
+.destacada {
+    /*toma todo el espacio diponible en la parte superior
+    oferta descada imagen toma un 50 y 50 en todas las columnas*/
+  
+    grid-row: 1/3;
+    grid-column: 1/3;
+   
+    display: grid;
+
+    grid-template-columns: auto;
+
+}
+
+@media screen and (min-width:700px) {
+
+    .destacada {
+        grid-column: 1 / 3;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: unset;
+    }
+}
+
+
+@media (min-width: 768px){
+    /*creamos aqui 3 columnas*/   
+    .venta {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+.card {
+    background-color: var(--claro);
+    padding: var(--pading);
+    border:1px solid #AAA;
+
+}
+
+.card p {
+    font-size:  .9rem;
+    /*para acomodar casa 1*/
+    line-height: 1.8rem;
+}
+
+.anuncio {
+    display: grid;
+}
+.anuncio .precio {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.precio span {
+    font-weight: 300;
+    color: var(--primario);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primario);
+    padding-top: var(--paddingt);
+    margin-top: 2rem;
+    color: var(--claro);
+}
+
+@media (min-width:768px) {
+    .footer .contenedor {
+        display: grid;
+        grid-template-columns: 30% 20% 2fr;
+        grid-column-gap: 2rem;
+    }
+}
+
+.footer .navegacion a {
+    display: block;
+    color: var(--claro);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.footer .contenedor-casas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, auto);
+}
+
+.footer .contenedor-casas .casa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 2rem;
+}
+.footer .contenedor-casas .casa p {
+    margin: 0;
+}
+.copyright {
+    background-color: var(--oscuro);
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
