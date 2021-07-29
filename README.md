@@ -15,6 +15,6 @@ Apuntes de Manejo de FlexBox Basicos
 13. Diseño de Pagina de Cocina(Grid CSS): https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Diseño-recetas-cocina/index.html
 14. Diseño de Pagina de Ventas de Casas: https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Venta-Terrenos/index.html
 15. Diseño de Pagina de Reservacion de Hoteles https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Pagina-Hoteles/index.html
-16. Delovper Diseño https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Diseño-developer/index.html
+16. Developer Diseño https://oscargonzalezbonifacio.github.io/CSS-Grid-Y-FLEX/Diseño-developer/index.html
 
 
